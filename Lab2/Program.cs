@@ -10,7 +10,7 @@ namespace Lab2
     {
         static void Main(string[] args)
         {
-            FizzBuzz();
+            PlayingCards();
         }
         /*
         = används när vi tilldelar någonting till något variable
@@ -109,7 +109,57 @@ namespace Lab2
                     
             }
         }
+        public static void PlayingCards()
+        {
+            for (int i = 1; i <= 4; i++)
+            {
+                string suit;
+                switch (i)
+                {
+                    case 1:
+                        suit = "Hjärta";
+                        break;
+                    case 2:
+                        suit = "Spade";
+                        break;
+                    case 3:
+                        suit = "Klöve";
+                        break;
+                    case 4:
+                        suit = "Ruta";
+                        break;
+                    default:
+                        suit = "";
+                        break;
+                }
+                for (int j = 1; j <= 13; j++)
+                {
+                    string st = null;
+                    if (j > 10)
+                    {
+                        switch (j)
+                        {
+                            case 11:
+                                st = "knekt";
+                                break;
+                            case 12:
+                                st = "Dam";
+                                break;
+                            case 13:
+                                st = "Kung";
+                                break;
+                            default:
+                                break;
 
+                        }
+                        Console.WriteLine(suit + " " + st);
+
+                    }
+                    else
+                        Console.WriteLine(suit + " " + j);
+                }
+            }
+        }
         public static void WriteLine(string s)
         {
             Console.WriteLine(s);
